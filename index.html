@@ -1,5 +1,14 @@
-SlicerAnalytics stub site
+<body>
+  <p id="status">SlicerAnalytics stub site</p>
+</body>
 
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const moduleName = urlParams.get('utm_medium');
+
+  const status = document.getElementById('status');
+  status.innerText = `Logging use of ${moduleName}`;
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97117718-5"></script>
